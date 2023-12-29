@@ -20,7 +20,7 @@ jar {
     }
     from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     archiveFileName = 'myname.jar'
-    destinationDirectory = file('C:/Users/PC/Documents/GitHub/JarGradle')
+    destinationDirectory = file("${projectDir}")
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_17
